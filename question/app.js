@@ -46,7 +46,14 @@ console.log(playerList[1].favorites[1])
 
 
 /*----------q5----------*/
-console.log((playerList[0].age + playerList[1].age + playerList[2].age) / 3);
+//console.log((playerList[0].age + playerList[1].age + playerList[2].age) / 3);を修正⬇︎
+
+let averageAge = 0;
+
+for (let i = 0; i < playerList.length; i++) {
+  averageAge += playerList[i].age;
+}
+console.log(averageAge / playerList.length);
 
 
 /*----------q6----------*/
@@ -157,6 +164,7 @@ console.log(numbers);
 /*----------q5----------*/
 let mixed = [4, '2', 5, '8', '9', 0, 1];
 
+/*
 for (let value of mixed) {
   if (typeof value === 'number' && value % 2 === 0) {
     console.log('even');
@@ -166,3 +174,14 @@ for (let value of mixed) {
     console.log('not number');
   }
 } 
+修正元*/
+
+for (let value of mixed) {
+  if (typeof value !== 'number') {
+    console.log('not number');
+  } else if (value % 2 === 0) {
+    console.log('even');
+  } else {
+    console.log('odd');
+  }
+}
