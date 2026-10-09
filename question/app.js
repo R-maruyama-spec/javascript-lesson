@@ -107,6 +107,7 @@ function remainder(x, y) {
 };
 console.log('5を3で割った余りは' + remainder(5, 3) +'です。');
 
+
 /*----------q10----------*/
 /*
 function foo() {
@@ -120,3 +121,48 @@ console.log(x);
 
 
 
+/*------------------------------------------応用編----------------------------------------*/
+/*----------q1----------*/
+let random = Math.floor(Math.random() * 10);
+console.log(random);
+
+/*----------q2----------*/
+function helloWorld() {
+  console.log('Hello World!');
+}
+
+setTimeout(helloWorld, 3000);
+
+
+/*----------q3----------*/
+let num = '5';
+
+if (num > 0) {
+  console.log('num is greater than 0');
+} else if (num < 0) {
+  console.log('num is less than 0');
+} else if (num === 0) {
+  console.log('num is 0');
+}
+
+
+/*----------q4----------*/
+let numbers = [];
+for (let i = 0; i <= 99; i++) {
+  numbers.push(i);
+}
+console.log(numbers);
+
+
+/*----------q5----------*/
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+
+for (let value of mixed) {
+  if (typeof value === 'number' && value % 2 === 0) {
+    console.log('even');
+  } else if (typeof value === 'number' && value % 2 !== 0) {
+    console.log('odd');
+  } else if (typeof value !== 'number') {
+    console.log('not number');
+  }
+} 
